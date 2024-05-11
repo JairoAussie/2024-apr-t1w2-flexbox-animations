@@ -53,10 +53,31 @@ nav a {
     margin-right: 0.5rem;
     border-radius: 15%;
 }
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        background-color: black;
+    }
+    /* 50% {
+        background-color: black;
+    } */
+    100% {
+        transform: rotate(180deg);
+        background-color: var(--orange);
+    }
+    /* from {background-color: red;}
+    to {background-color: yellow;} */
+}
+h1:hover {
+    animation: spin 1s infinite linear;
+}
 
 nav a:hover {
     background-color: var(--orange);
     color: black;
+    /* animation-name: spin;
+    animation-duration: 3s; */
+    animation: spin 3s infinite linear;
 }
 
 .training-option {
